@@ -7,9 +7,10 @@ package restful
 import "bytes"
 
 const (
-	MIME_XML       = "application/xml"     // Accept or Content-Type used in Consumes() and/or Produces()
-	MIME_JSON      = "application/json"    // Accept or Content-Type used in Consumes() and/or Produces()
-	MIME_MULTIPART = "multipart/form-data" // Accept or Content-Type used in Consumes() and/or Produces()
+	MIME_XML        = "application/xml"     // Accept or Content-Type used in Consumes() and/or Produces()
+	MIME_JSON       = "application/json"    // Accept or Content-Type used in Consumes() and/or Produces()
+	MIME_MULTIPART  = "multipart/form-data" // Accept or Content-Type used in Consumes() and/or Produces()
+	MIME_IMAGE_JPEG = "image/jpg"
 
 	HEADER_Allow                         = "Allow"
 	HEADER_Accept                        = "Accept"
