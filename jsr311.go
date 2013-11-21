@@ -39,6 +39,7 @@ func (r RouterJSR311) SelectRoute(
 
 // http://jsr311.java.net/nonav/releases/1.1/spec/spec3.html#x3-360003.7.2
 func (r RouterJSR311) detectRoute(routes []Route, httpRequest *http.Request) (*Route, error) {
+	fmt.Println("")
 	// http method
 	methodOk := []Route{}
 	for _, each := range routes {
@@ -60,7 +61,7 @@ func (r RouterJSR311) detectRoute(routes []Route, httpRequest *http.Request) (*R
 			}
 		}
 		if len(inputMediaOk) == 0 {
-			return nil, NewError(http.StatusUnsupportedMediaType, "415: Unsupported Media Type")
+			return nil, NewError(http.StatusUnsupportedMediaType, "415: Unsupported Media Type, content type: "+contentType)
 		}
 	}
 	// accept
